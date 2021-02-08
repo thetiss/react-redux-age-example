@@ -1,0 +1,36 @@
+.Age {
+  width: 750px;
+  margin: 80px auto;
+  background: white;
+  border-radius: 7px;
+  box-shadow: 1 px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.Age_title {
+  border-bottom: 1px solid grey;
+  color: grey;
+  background-color: rgb(0, 162, 255);
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.Age button {
+  margin: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.Age_historyItem {
+  list-style-type: none;
+  border: 1px solid #f9e5ad;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7e8bc70;
+}
+
+.Age_logo {
+  width: 50px;
+  height: 50px;
+}
