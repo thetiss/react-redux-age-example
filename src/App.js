@@ -9,7 +9,7 @@ const App = ( { currentAge, ageHistory, onAgeUp, onAgeDown, onHistoryItemDeleted
       <hr/>
       <div><h1>Age history, You can delete!</h1>
         <ul>
-         { ageHistory && ageHistory.map(( item, index ) => {
+         { ageHistory && ageHistory.map(( item ) => {
             return(
               <li 
                 key={item.id} 
@@ -17,9 +17,7 @@ const App = ( { currentAge, ageHistory, onAgeUp, onAgeDown, onHistoryItemDeleted
                 className={ styles.Age_historyItem }>
                 {item.id}_{item.value}
               </li>    
-            ) 
-         }   
-          ) 
+            )}) 
          }
         </ul>
       </div>
