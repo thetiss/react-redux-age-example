@@ -1,5 +1,5 @@
 import { Reducer } from "redux";
-import { ActionTypes, IBasicAnyAction } from './basicActions';
+import { ActionTypes, BasicActions } from './basicActions';
 // named export
 export interface IBasicState {
     property: any
@@ -9,7 +9,7 @@ export interface IBasicState {
 const initBasicState: IBasicState = {
     property: null,
 }
-export const basicReducer: Reducer<IBasicState, IBasicAnyAction> = (
+export const basicReducer: Reducer<IBasicState, BasicActions> = (
     state = initBasicState,
     action
 ) => {

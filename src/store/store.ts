@@ -18,17 +18,38 @@ import thunk from "redux-thunk";
 IBasicState 从reducer来是因为本身在reducer中要使用state
 */
 import { IBasicState, basicReducer } from "./basicReducer";
+import { IDogState, dogReducer } from "./dogReducer";
 
-// Create an interface for the application state
+/* Create an interface for the application state
+The IAppState interface defines what our App’s root state should be. 
+only have a basicState prop
+*/
 export interface IAppState {
     basicState: IBasicState;
 };
 
-const rootReducer = () => combineReducers(
-    basicReducer
-);
+export interface ISPAForDogState {
+    dogState: IDogState;
+}
+/*
+rootReducer 不能再写成arrow function, 否则会报错。
+Next, we define our rootReducer , which is a constant that combines all of our reducers into one.
+*/
+const rootReducer =  combineReducers<IAppState>({
+    basicState: basicReducer
+});
 
-const configureState = () => {
-    return createStore(rootReducer,undefined,applyMiddleware(thunk));
+const spaRootReducer = combineReducers<ISPAForDogState>({
+    dogState: dogReducer
+})
+/* This function is responsible for creating our Store and applying the Thunk middleware.*/
+const configureState = (): Store<IAppState, any> => {
+    const store = createStore(rootReducer, undefined, applyMiddleware(thunk));
+    return store;
 }
 export default configureState;
+
+// 返回dog store
+export const  configureDogState = (): Store<ISPAForDogState, any> => {
+    return createStore(spaRootReducer, undefined, applyMiddleware(thunk));
+}

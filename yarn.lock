@@ -1387,7 +1387,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@material-ui/core@^4.11.3":
+"@material-ui/core@^4.9.9":
   version "4.11.3"
   resolved "https://registry.npm.taobao.org/@material-ui/core/download/@material-ui/core-4.11.3.tgz#f22e41775b0bd075e36a7a093d43951bf7f63850"
   integrity sha1-8i5Bd1sL0HXjanoJPUOVG/f2OFA=
@@ -1866,6 +1866,13 @@
   version "0.14.21"
   resolved "https://registry.npm.taobao.org/@types/react-addons-linked-state-mixin/download/@types/react-addons-linked-state-mixin-0.14.21.tgz#3abf296fe09d036c233ebe55f4562f3e6233af49"
   integrity sha1-Or8pb+CdA2wjPr5V9FYvPmIzr0k=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-dom@^17.0.0":
+  version "17.0.0"
+  resolved "https://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-17.0.0.tgz#b3b691eb956c4b3401777ee67b900cb28415d95a"
+  integrity sha1-s7aR65VsSzQBd37me5AMsoQV2Vo=
   dependencies:
     "@types/react" "*"
 
